@@ -24,7 +24,7 @@ public class Card : MonoBehaviour {
 
 	public bool faceUp {
 		get {
-			return( !back.activeSelf );
+			return( !back.activeSelf );//如果back的active是开着的，那么这个是face down
 		}
 		set {
 			back.SetActive(!value);
@@ -81,7 +81,7 @@ public class Card : MonoBehaviour {
 		}
 	}
 
-	public void OnMouseUpAsButton(){
+	public virtual void OnMouseUpAsButton(){
 	}
 }
 

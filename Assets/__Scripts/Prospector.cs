@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Prospector : MonoBehaviour {
 	static public Prospector    S;
-	private ScoreManager SM = new ScoreManager();
+	private ScoreManager SM;
 
 	[Header("Set in Inspector")]
 	public TextAsset            deckXML; 
@@ -39,6 +39,7 @@ public class Prospector : MonoBehaviour {
 	void Awake() {
 		S = this; // Set up a Singleton for Prospector
 		SetUpUITexts();
+        if (SM == null) SM = GetComponent<ScoreManager>();
 	}
 
 	void SetUpUITexts() {

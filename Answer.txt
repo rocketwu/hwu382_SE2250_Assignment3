@@ -1,0 +1,11 @@
+01,
+	Card.cs
+	OnMouseUpAsButton is cannot be overrided because it is not a virtual function in Card.cs
+
+02,
+	Prospector.cs
+	Trying to new ScoreManager which is a MonoBehaviour.
+03,
+	
+	Decks.cs
+	the range of the rank should be 1-13 instead of 1-14.
