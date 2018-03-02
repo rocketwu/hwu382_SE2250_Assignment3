@@ -285,6 +285,7 @@ public class Prospector : MonoBehaviour {
 	// CardClicked is called any time a card in the game is clicked
 	public void CardClicked(CardProspector cd) {
 		// The reaction is determined by the state of the clicked card
+        //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<在这里修改
 		switch (cd.state) {
 		case eCardState.target:
 			// Clicking the target card does nothing
@@ -318,6 +319,7 @@ public class Prospector : MonoBehaviour {
 			SetTableauFaces(); // Update tableau card face-ups 
 			SM.Event(eScoreEvent.mine);
 			FloatingScoreHandler(eScoreEvent.mine);
+            Debug.Log(cd.suit+cd.rank);
 			break; 
 		}
 		// Check to see whether the game is over or not
@@ -364,7 +366,7 @@ public class Prospector : MonoBehaviour {
 		if (!c0.faceUp || !c1.faceUp) return(false);
 
 		// If they are 1 apart, they are adjacent
-		if (Mathf.Abs(c0.rank - c1.rank) == 1) {
+		if (Mathf.Abs(c0.rank - c1.rank) == 1&&(c0.colS!=c1.colS)) {
 			return(true);
 		}
 		// If one is Ace and the other King, they are adjacent
