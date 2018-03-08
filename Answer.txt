@@ -9,3 +9,11 @@
 	
 	Decks.cs
 	the range of the rank should be 1-13 instead of 1-14.
+==========================================================================================================
+Limitions:
+01,
+	it is hard to imbed paying system into unity project, to solve this, we can download a third-party SDK an import it.
+02,	
+	it is hard to make online game in unity. We can use third party platform such as Photon Engine to build a online game.
+03,
+	it is hard to share game status on the social platform. We can import APIs into unity to do it.

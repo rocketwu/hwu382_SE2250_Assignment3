@@ -106,6 +106,7 @@ public class Deck : MonoBehaviour {
 	}
 	// InitDeck is called by Prospector when it is ready
 	public void InitDeck(string deckXMLText) {
+        
 		// This creates an anchor for all the Card GameObjects in the Hierarchy
 		if (GameObject.Find("_Deck") == null) {
 			GameObject anchorGO = new GameObject("_Deck");

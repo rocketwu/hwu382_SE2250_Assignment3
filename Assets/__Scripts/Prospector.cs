@@ -101,6 +101,7 @@ public class Prospector : MonoBehaviour {
 			} else {
 				roundResultText.text = "Your final score was: "+score;
 			}
+            GetComponent<Share>().ShareToTW("You get score: "+score);
 			ShowResultsUI( true );
 			// print ("Game Over. You Lost. :("); // Comment out this line
 			ScoreManager.EVENT(eScoreEvent.gameLoss);
